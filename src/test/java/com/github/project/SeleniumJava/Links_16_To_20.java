@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -231,4 +232,135 @@ public class Links_16_To_20 extends InternetHerokuAppBase{
         }
 
     }
+    
+    
+    @Test(priority=2, description="checkForFileUpload")
+    public void checkForFileUpload() {
+        
+    	try {
+            
+	    	SoftAssert asrt = new SoftAssert();
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.HomePage_WelcomeText), "HomePage_WelcomeText is NOT displayed!");
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.HomePage_FileUploadLink), "HomePage_FileUploadLink is NOT displayed!");
+	
+	        clickWhenClickable(InternetHerokuAppLocators.HomePage_FileUploadLink);
+	
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.FileUpload_Header), "FileUpload_Header is NOT displayed!");
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.FileUpload_Paragraph), "FileUpload_Paragraph is NOT displayed!");
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.FileUpload_UploadInput), "FileUpload_UploadInput is NOT displayed!");
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.FileUpload_UploadButton), "FileUpload_UploadButton is NOT displayed!");
+	
+	        // Locate the file input element & Provide the full file path to upload
+	        sendKeys(InternetHerokuAppLocators.FileUpload_UploadInput, System.getProperty("user.dir") + File.separator + "uploads" + File.separator + "SampleText.txt");
+	        Thread.sleep(3000);
+	        
+	        // Click the 'Upload' button
+	        clickWhenClickable(InternetHerokuAppLocators.FileUpload_UploadButton);
+	        
+	        // Optional: Verify upload success
+	        String uploadedMessage = getText(InternetHerokuAppLocators.FileUpload_UploadedMessage);
+	        if (uploadedMessage.equalsIgnoreCase("File Uploaded!")) {
+	            System.out.println("File uploaded successfully!");
+	        } else {
+	            System.out.println("Upload failed!");
+	        }
+	        Thread.sleep(3000);
+	        
+	        asrt.assertAll();
+                        
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test(priority=3, description="checkForFloatingMenu")
+    public void checkForFloatingMenu() {
+        
+    	try {
+            
+	    	SoftAssert asrt = new SoftAssert();
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.HomePage_WelcomeText), "HomePage_WelcomeText is NOT displayed!");
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.HomePage_FloatingMenuLink), "HomePage_FloatingMenuLink is NOT displayed!");
+	
+	        clickWhenClickable(InternetHerokuAppLocators.HomePage_FloatingMenuLink);
+	
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.FloatingMenu_Header), "FloatingMenu_Header is NOT displayed!");
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.FloatingMenu_Paragraph), "FloatingMenu_Paragraph is NOT displayed!");
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.FloatingMenu_MenuTabs), "FloatingMenu_MenuTabs is NOT displayed!");
+	
+	        // Scroll down using JavaScript to simulate user scrolling
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+
+            // Pause to observe the floating menu (optional)
+            Thread.sleep(2000);
+
+            // Check if floating menu is displayed
+            boolean floatingMenuVisible = isElementDisplayed(InternetHerokuAppLocators.FloatingMenu_MenuTabs);
+            if (floatingMenuVisible) {
+                System.out.println("Floating menu is visible.");
+            } else {
+                System.out.println("Floating menu is not visible!");
+            }
+
+            // Click on one of the floating menu links, e.g., 'About'
+            WebElement aboutLink = driver.findElement(By.linkText("About"));
+            aboutLink.click();
+
+            // Wait to observe navigation (optional)
+            Thread.sleep(2000);
+            
+            String currentURL = driver.getCurrentUrl();
+            
+            if (currentURL.contains("about")) {
+                System.out.println("Clicked on About link.");
+			}else {
+				System.out.println("NOT clicked on About link!");
+            }
+	        
+	        asrt.assertAll();
+                        
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @Test(priority=4, description="checkForForgotPassword")
+    public void checkForForgotPassword() {
+        
+    	try {
+            
+	    	SoftAssert asrt = new SoftAssert();
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.HomePage_WelcomeText), "HomePage_WelcomeText is NOT displayed!");
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.HomePage_ForgotPasswordLink), "HomePage_ForgotPasswordLink is NOT displayed!");
+	
+	        clickWhenClickable(InternetHerokuAppLocators.HomePage_ForgotPasswordLink);
+	
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.ForgotPassword_Header), "ForgotPassword_Header is NOT displayed!");
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.ForgotPassword_EmailInput), "ForgotPassword_EmailInput is NOT displayed!");
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.ForgotPassword_RetrievePasswordButton), "ForgotPassword_RetrievePasswordButton is NOT displayed!");
+	
+	        // Locate the email input field and enter an email
+	        sendKeys(InternetHerokuAppLocators.ForgotPassword_EmailInput, "test@example.com");
+
+            // Click the 'Retrieve password' button
+            clickWhenClickable(InternetHerokuAppLocators.ForgotPassword_RetrievePasswordButton);
+
+            // Optional: Verify that we navigated to the correct confirmation page
+            boolean confirmation = isElementDisplayed(InternetHerokuAppLocators.ForgotPassword_Header);
+            if (confirmation) {
+            	System.out.println("Form submitted successfully.");
+            } else {
+                System.out.println("Submission went through, but server responded with an error (expected on this demo site).");
+            }
+
+	        asrt.assertAll();
+                        
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
 }

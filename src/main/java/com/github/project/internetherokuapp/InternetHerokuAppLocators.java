@@ -24,6 +24,9 @@ public class InternetHerokuAppLocators {
 	public static final By HomePage_EntryAdLink = By.partialLinkText("Entry Ad");
 	public static final By HomePage_ExitIntentLink = By.partialLinkText("Exit Intent");
 	public static final By HomePage_FileDownloadLink = By.partialLinkText("File Download");
+	public static final By HomePage_FileUploadLink = By.partialLinkText("File Upload");
+	public static final By HomePage_FloatingMenuLink = By.partialLinkText("Floating Menu");
+	public static final By HomePage_ForgotPasswordLink = By.partialLinkText("Forgot Password");
 	public static final By HomePage_FooterLink = By.xpath("//div[@id='page-footer']//div/a");
 	
 	//AddRemove Page Locators
@@ -125,8 +128,22 @@ public class InternetHerokuAppLocators {
 	public static final By FileDownload_ModalWindowBody = By.cssSelector("div.modal-body p");
 	public static final By FileDownload_ModalWindowCloseButton = By.cssSelector("div.modal-footer p");
 
-	
-	
-	
+	//FileUpload Page Locators
+	public static final By FileUpload_Header = By.xpath("//h3[contains(text(),'File Uploader')]");
+	public static final By FileUpload_Paragraph = By.cssSelector("h3 + p");
+	public static final By FileUpload_UploadInput = By.cssSelector("input#file-upload");
+	public static final By FileUpload_UploadButton = By.cssSelector("input#file-submit");
+	public static final By FileUpload_UploadedMessage = By.xpath("//h3[contains(text(),'File Uploaded!')]");
+	public static final By FileUpload_UploadedFileName = By.cssSelector("div#uploaded-files.panel");
+
+	//FloatingMenu Page Locators
+	public static final By FloatingMenu_Header = By.xpath("//h3[contains(text(),'Floating Menu')]");
+	public static final By FloatingMenu_Paragraph = By.cssSelector("div.row p");
+	public static final By FloatingMenu_MenuTabs = By.cssSelector("div#menu a");
+		
+	//ForgotPassword Page Locators
+	public static final By ForgotPassword_Header = By.xpath("//h3[contains(text(),'Forgot Password')]");
+	public static final By ForgotPassword_EmailInput = By.cssSelector("input#email");
+	public static final By ForgotPassword_RetrievePasswordButton = By.cssSelector("button#form_submit");
 	
 }
