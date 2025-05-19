@@ -606,9 +606,9 @@ public class TestBase {
     /**
      * Gets the visible text of an element located by a locator with a wait.
      */
-    public String getText(By locator, int timeoutInSeconds) {
+    public String getText(By locator) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
             return element.getText();
         } catch (Exception e) {
@@ -636,9 +636,9 @@ public class TestBase {
      * Sends keys to an input element located by the given locator with wait.
      * Clears the field before sending keys.
      */
-    public void sendKeys(By locator, String text, int timeoutInSeconds) {
+    public void sendKeys(By locator, String text) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
             element.clear();  // Clear the field before typing
             element.sendKeys(text);
@@ -679,9 +679,9 @@ public class TestBase {
     /**
      * Select an option by visible text from a standard <select> dropdown.
      */
-    public void selectByVisibleText(By locator, String visibleText, int timeoutInSeconds) {
+    public void selectByVisibleText(By locator, String visibleText) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement dropdownElement = wait.until(ExpectedConditions.elementToBeClickable(locator));
             Select dropdown = new Select(dropdownElement);
             dropdown.selectByVisibleText(visibleText);
@@ -693,9 +693,9 @@ public class TestBase {
     /**
      * Select an option by index from a standard <select> dropdown.
      */
-    public void selectByIndex(By locator, int index, int timeoutInSeconds) {
+    public void selectByIndex(By locator, int index) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement dropdownElement = wait.until(ExpectedConditions.elementToBeClickable(locator));
             Select dropdown = new Select(dropdownElement);
             dropdown.selectByIndex(index);
@@ -707,9 +707,9 @@ public class TestBase {
     /**
      * Select an option by value from a standard <select> dropdown.
      */
-    public void selectByValue(By locator, String value, int timeoutInSeconds) {
+    public void selectByValue(By locator, String value) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement dropdownElement = wait.until(ExpectedConditions.elementToBeClickable(locator));
             Select dropdown = new Select(dropdownElement);
             dropdown.selectByValue(value);
@@ -765,9 +765,9 @@ public class TestBase {
     /**
      * Select an option in a custom dropdown (non-<select>) by visible text.
      */
-    public void selectCustomDropdown(By dropdownLocator, By optionLocator, String optionText, int timeoutInSeconds) {
+    public void selectCustomDropdown(By dropdownLocator, By optionLocator, String optionText) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement dropdownElement = wait.until(ExpectedConditions.elementToBeClickable(dropdownLocator));
             dropdownElement.click();  // Open the dropdown
             

@@ -50,7 +50,7 @@ public class Setup extends TestBase{
 			productName = config.getProperty("productName");
 		}
 		
-		driver.get(data.getProperty("baseURL." + productName));
+		driver.get(data.getProperty("baseURL_" + productName));
 	}
 	
 	@AfterClass(alwaysRun = true)
