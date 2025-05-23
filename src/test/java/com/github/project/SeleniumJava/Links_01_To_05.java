@@ -3,17 +3,14 @@ package com.github.project.SeleniumJava;
 import java.net.URI;
 import java.util.List;
 import java.util.Random;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import com.github.project.internetherokuapp.InternetHerokuAppBase;
 import com.github.project.internetherokuapp.InternetHerokuAppLocators;
-
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 

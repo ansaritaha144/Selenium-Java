@@ -11,10 +11,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import com.github.project.internetherokuapp.InternetHerokuAppBase;
 import com.github.project.internetherokuapp.InternetHerokuAppLocators;
-
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 

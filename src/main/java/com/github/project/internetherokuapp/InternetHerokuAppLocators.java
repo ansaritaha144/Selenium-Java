@@ -27,6 +27,11 @@ public class InternetHerokuAppLocators {
 	public static final By HomePage_FileUploadLink = By.partialLinkText("File Upload");
 	public static final By HomePage_FloatingMenuLink = By.partialLinkText("Floating Menu");
 	public static final By HomePage_ForgotPasswordLink = By.partialLinkText("Forgot Password");
+	public static final By HomePage_FormAuthenticationLink = By.partialLinkText("Form Authentication");
+	public static final By HomePage_FramesLink = By.partialLinkText("Frames");
+	public static final By HomePage_GeolocationLink = By.partialLinkText("Geolocation");
+	public static final By HomePage_HorizontalSliderLink = By.partialLinkText("Horizontal Slider");
+	public static final By HomePage_HoversLink = By.partialLinkText("Hovers");
 	public static final By HomePage_FooterLink = By.xpath("//div[@id='page-footer']//div/a");
 	
 	//AddRemove Page Locators
@@ -145,5 +150,51 @@ public class InternetHerokuAppLocators {
 	public static final By ForgotPassword_Header = By.xpath("//h3[contains(text(),'Forgot Password')]");
 	public static final By ForgotPassword_EmailInput = By.cssSelector("input#email");
 	public static final By ForgotPassword_RetrievePasswordButton = By.cssSelector("button#form_submit");
+	
+	//FormAuthentication Page Locators
+	public static final By FormAuthentication_Header = By.xpath("//h2[contains(text(),'Login Page')]");
+	public static final By FormAuthentication_Paragraph = By.cssSelector("h4.subheader");
+	public static final By FormAuthentication_UsernameInput = By.cssSelector("input#username");
+	public static final By FormAuthentication_PasswordInput = By.cssSelector("input#password");
+	public static final By FormAuthentication_LoginButton = By.cssSelector("button.radius");
+	public static final By FormAuthentication_SecureAreaHeader = By.cssSelector("//h2[contains(text(),'Secure Area')]");
+	public static final By FormAuthentication_SecureAreaParagraph = By.cssSelector("h4.subheader");
+	public static final By FormAuthentication_SecureAreaLogoutButton = By.cssSelector("a.secondary.radius");
+
+	//Frames Page Locators
+	public static final By Frames_Header = By.xpath("//h3[contains(text(),'Frames')]");
+	public static final By Frames_NestedFramesLink = By.partialLinkText("Nested Frames");
+	public static final By Frames_iFrameLink = By.partialLinkText("iFrame");
+	public static final By Frames_NestedFrames_LeftFrame = By.cssSelector("frame[name='frame-left']");
+	public static final By Frames_NestedFrames_RightFrame = By.cssSelector("frame[name='frame-right']");
+	public static final By Frames_NestedFrames_MiddleFrame = By.cssSelector("frame[name='frame-middle']");
+	public static final By Frames_NestedFrames_BottomFrame = By.cssSelector("frame[name='frame-bottom']");
+	public static final By Frames_NestedFrames_TopFrame = By.cssSelector("frame[name='frame-top']");
+	public static final By Frames_Editor_iFrame = By.id("mce_0_ifr");
+	public static final By Frames_Editor = By.id("tinymce");
+	
+	//GeolocationPage Locators
+	public static final By Geolocation_Header = By.xpath("//h3[contains(text(),'Geolocation')]");
+	public static final By Geolocation_Paragraph = By.cssSelector("h3 + p");
+	public static final By Geolocation_WhereAmI_Button = By.cssSelector("h3 ~ button");
+	public static final By Geolocation_Latitude = By.cssSelector("div#lat-value");
+	public static final By Geolocation_Longitude = By.cssSelector("div#long-value");
+	public static final By Geolocation_SeeItOnGoogle_Link = By.cssSelector("div#map-link a");
+
+	//HorizontalSliderPage Locators
+	public static final By HorizontalSlider_Header = By.xpath("//h3[contains(text(),'Horizontal Slider')]");
+	public static final By HorizontalSlider_Paragraph = By.cssSelector("h4.subheader");
+	public static final By HorizontalSlider_SliderInput = By.cssSelector("input[type='range']");
+	public static final By HorizontalSlider_SliderValue = By.cssSelector("span#range");
+
+	//HoversPage Locators 
+	public static final By Hovers_Header = By.xpath("//h3[contains(text(),'Hovers')]");
+	public static final By Hovers_Paragraph = By.cssSelector("h3 + p");
+	public static final By Hovers_Images = By.cssSelector("div.figure");
+
+	
+
+	
+	
 	
 }

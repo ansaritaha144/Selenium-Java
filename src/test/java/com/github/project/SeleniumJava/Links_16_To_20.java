@@ -5,7 +5,6 @@ import java.io.File;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -25,9 +24,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import com.github.project.internetherokuapp.InternetHerokuAppBase;
 import com.github.project.internetherokuapp.InternetHerokuAppLocators;
+
+/* 
+ * Exit Intent
+ * File Download
+ * File Upload
+ * Floating Menu
+ * Forgot Password
+ * 
+ * */
 
 public class Links_16_To_20 extends InternetHerokuAppBase{
 
