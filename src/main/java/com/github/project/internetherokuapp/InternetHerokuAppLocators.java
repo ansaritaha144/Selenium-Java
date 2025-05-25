@@ -32,6 +32,16 @@ public class InternetHerokuAppLocators {
 	public static final By HomePage_GeolocationLink = By.partialLinkText("Geolocation");
 	public static final By HomePage_HorizontalSliderLink = By.partialLinkText("Horizontal Slider");
 	public static final By HomePage_HoversLink = By.partialLinkText("Hovers");
+	public static final By HomePage_InputsLink = By.partialLinkText("Inputs");
+	public static final By HomePage_InfiniteScrollLink = By.partialLinkText("Infinite Scroll");
+	public static final By HomePage_JQueryUIMenusLink = By.partialLinkText("JQuery UI Menus");
+	public static final By HomePage_JavascriptAlertsLink = By.partialLinkText("JavaScript Alerts");
+	public static final By HomePage_JavascriptOnloadEventErrorLink = By.partialLinkText("JavaScript onload event error");
+	public static final By HomePage_KeyPressesLink = By.partialLinkText("Key Presses");
+	public static final By HomePage_LargeAndDeepDOMLink = By.partialLinkText("Large & Deep DOM");
+	public static final By HomePage_MultipleWindowsLink = By.partialLinkText("Multiple Windows");
+	public static final By HomePage_NestedFramesLink = By.partialLinkText("Nested Frames");
+	public static final By HomePage_NotificationMessages = By.partialLinkText("Notification Messages");
 	public static final By HomePage_FooterLink = By.xpath("//div[@id='page-footer']//div/a");
 	
 	//AddRemove Page Locators
@@ -192,9 +202,71 @@ public class InternetHerokuAppLocators {
 	public static final By Hovers_Paragraph = By.cssSelector("h3 + p");
 	public static final By Hovers_Images = By.cssSelector("div.figure");
 
-	
+	//InfiniteScrollPage Locators	
+	public static final By InfiniteScroll_Header = By.xpath("//h3[contains(text(),'Infinite Scroll')]");
+	public static final By InfiniteScroll_Paragraph = By.cssSelector("div.jscroll-added");
 
+	//InputsPage Locators
+	public static final By Inputs_Header = By.xpath("//h3[contains(text(),'Inputs')]");
+	public static final By Inputs_Paragraph = By.cssSelector("div.example p");
+	public static final By Inputs_InputBox = By.cssSelector("input[type=number]");
+
+	//JQueryUIMenusPage Locators
+	public static final By JQueryUIMenus_Header = By.xpath("//h3[contains(text(),'JQueryUI - Menu')]");
+	public static final By JQueryUIMenus_Paragraph = By.cssSelector("div.description p");
+	public static final By JQueryUIMenus_DisabledMenu = By.cssSelector("li#ui-id-1.ui-state-disabled.ui-menu-item");
+	public static final By JQueryUIMenus_EnabledMenu = By.cssSelector("li#ui-id-3.ui-menu-item");
+	public static final By JQueryUIMenus_DownloadsMenu = By.cssSelector("li#ui-id-4.ui-menu-item");
+	public static final By JQueryUIMenus_BackToJQueryUI_Option = By.cssSelector("li#ui-id-8.ui-menu-item");
+	public static final By JQueryUIMenus_PDFOption = By.cssSelector("li#ui-id-5.ui-menu-item");
+	public static final By JQueryUIMenus_CSVOption = By.cssSelector("li#ui-id-6.ui-menu-item");
+	public static final By JQueryUIMenus_ExcelOption = By.cssSelector("li#ui-id-7.ui-menu-item");
+	public static final By JQueryUIPage_Header = By.xpath("//h3[contains(text(),'JQuery UI')]");
+	public static final By JQueryUIPage_Paragraph = By.cssSelector("div.description p");
+	public static final By JQueryUIPage_MenuLink = By.linkText("Menu");
+	public static final By JQueryUIPage_JQueryOfficialLink = By.linkText("JQuery UI");
+
+	//JavascriptAlertsPage Locators
+	public static final By JavascriptAlerts_Header = By.xpath("//h3[contains(text(),'JavaScript Alerts')]");
+	public static final By JavascriptAlerts_Paragraph = By.cssSelector("h3 + p");
+	public static final By JavascriptAlerts_JSAlert_Button = By.xpath("//button[contains(text(),'Click for JS Alert')]");
+	public static final By JavascriptAlerts_JSConfirm_Button = By.xpath("//button[contains(text(),'Click for JS Confirm')]");
+	public static final By JavascriptAlerts_JSPrompt_Button = By.xpath("//button[contains(text(),'Click for JS Prompt')]");
+	public static final By JavascriptAlerts_ResultText = By.cssSelector("p#result");
 	
+	//JavaScriptOnloadEventErrorPage Locators
+	public static final By JavaScriptOnloadEventError_Parapraph = By.cssSelector("body p");
+
+	//KeyPressesPage Locators
+	public static final By KeyPresses_Header = By.xpath("//h3[contains(text(),'Key Presses')]");
+	public static final By KeyPresses_Paragraph = By.cssSelector("h3 + p");
+	public static final By KeyPresses_InputBox = By.cssSelector("input#target");
+	public static final By KeyPresses_ResultText = By.cssSelector("p#result");
 	
+	//LargeAndDeepDOMLinkPage Locators
+	public static final By LargeAndDeepDOM_Header = By.xpath("//h3[contains(text(),'Large & Deep DOM')]");
+	public static final By LargeAndDeepDOM_Paragraph = By.cssSelector("h3 + p");
+	public static final By LargeAndDeepDOM_Siblings = By.cssSelector("div#siblings");
+	public static final By LargeAndDeepDOM_Table = By.cssSelector("table#large-table");
+	
+	//MultipleWindowsPage Locators
+	public static final By MultipleWindows_Header = By.xpath("//h3[contains(text(),'Opening a new window')]");
+	public static final By MultipleWindows_NewWindowLink = By.linkText("Click Here");
+	public static final By MultipleWindows_NewWindowHeader = By.xpath("//h3[contains(text(),'New Window')]");
+	
+	//NestedFramePage Locators
+	public static final By NestedFrames_LeftFrame = By.cssSelector("frameset frame[name='frame-left']");
+	public static final By NestedFrames_RightFrame = By.cssSelector("frameset frame[name='frame-right']");
+	public static final By NestedFrames_MiddleFrame = By.cssSelector("frameset frame[name='frame-middle']");
+	public static final By NestedFrames_BottomFrame = By.cssSelector("frame[name='frame-bottom']");
+	public static final By NestedFrames_TopFrame = By.cssSelector("frame[name='frame-top']");
+
+	//NotificationMessagesPage Locators
+	public static final By NotificationMessages_Header = By.xpath("//h3[contains(text(),'Notification Message')]");
+	public static final By NotificationMessages_Paragraph = By.cssSelector("h3 + p");
+	public static final By NotificationMessages_NewNotificationLink = By.cssSelector("h3 + p a");
+	public static final By NotificationMessages_NotificationText = By.cssSelector("div#flash");
+	public static final By NotificationMessages_NotificationCloseButton = By.cssSelector("div#flash a");
+
 	
 }
