@@ -41,7 +41,13 @@ public class InternetHerokuAppLocators {
 	public static final By HomePage_LargeAndDeepDOMLink = By.partialLinkText("Large & Deep DOM");
 	public static final By HomePage_MultipleWindowsLink = By.partialLinkText("Multiple Windows");
 	public static final By HomePage_NestedFramesLink = By.partialLinkText("Nested Frames");
-	public static final By HomePage_NotificationMessages = By.partialLinkText("Notification Messages");
+	public static final By HomePage_NotificationMessagesLink = By.partialLinkText("Notification Messages");
+	public static final By HomePage_RedirectLink = By.partialLinkText("Redirect Link");
+	public static final By HomePage_SecureFileDownloadLink = By.partialLinkText("Secure File Download");
+	public static final By HomePage_ShadowDOMLink = By.partialLinkText("Shadow DOM");
+	public static final By HomePage_ShiftingContentLink = By.partialLinkText("Shifting Content");
+	public static final By HomePage_SlowResourcesLink = By.partialLinkText("Slow Resources");
+
 	public static final By HomePage_FooterLink = By.xpath("//div[@id='page-footer']//div/a");
 	
 	//AddRemove Page Locators
@@ -268,5 +274,45 @@ public class InternetHerokuAppLocators {
 	public static final By NotificationMessages_NotificationText = By.cssSelector("div#flash");
 	public static final By NotificationMessages_NotificationCloseButton = By.cssSelector("div#flash a");
 
+	//RedirectPage Locators
+	public static final By RedirectPage_Header = By.xpath("//h3[contains(text(),'Redirection')]");
+	public static final By RedirectPage_Paragraph = By.cssSelector("h3 + p");
+	public static final By RedirectPage_RedirectLink = By.cssSelector("a[href='redirect']");
+	public static final By RedirectPage_StatusCodes_Header = By.xpath("//h3[contains(text(),'Status Codes')]");
+	public static final By RedirectPage_StatusCodes_Paragraph = By.cssSelector("h3 + p");
+	public static final By RedirectPage_StatusCodes_Link = By.cssSelector("h3 ~ ul a");
+	public static final By RedirectPage_StatusCodes_200_Link = By.cssSelector("a[href*='200']");
+	public static final By RedirectPage_StatusCodes_301_Link = By.cssSelector("a[href*='301']");
+	public static final By RedirectPage_StatusCodes_404_Link = By.cssSelector("a[href*='404']");
+	public static final By RedirectPage_StatusCodes_500_Link = By.cssSelector("a[href*='500']");
+
+	//SecureFileDownloadPage Locators
+	public static final By SecureFileDownload_Header = By.xpath("//h3[contains(text(),'Secure File Downloader')]");
+	public static final By SecureFileDownload_FileLinks = By.cssSelector("h3 ~ a");
+
+	//ShadowDOMPage Locators
+	public static final By ShadowDOM_Header = By.xpath("//h1[contains(text(),'Simple template')]");
+
+	//ShiftingContentPage Locators
+	public static final By ShiftingContent_Header = By.xpath("//h3[contains(text(),'Shifting Content')]");
+	public static final By ShiftingContent_Paragraph = By.cssSelector("h3 + p");
+	public static final By ShiftingContent_MenuLink = By.partialLinkText("Menu");
+	public static final By ShiftingContent_ImageLink = By.partialLinkText("image");
+	public static final By ShiftingContent_ListLink = By.partialLinkText("List");
+	public static final By ShiftingContent_MenuItems = By.cssSelector("ul li a");
+	public static final By ShiftingContent_ListItems_TextContainer = By.cssSelector("div.large-6");
+
+	//SlowResourcesPage Locators
+	public static final By SlowResources_Header = By.xpath("//h3[contains(text(),'Slow Resources')]");
+	public static final By SlowResources_Paragraph = By.cssSelector("h3 + p");
+	public static final By SlowResources_MessageParagraph = By.cssSelector("div.example p");
+
+	
+	
+	
+	
+	
+	
+	
 	
 }

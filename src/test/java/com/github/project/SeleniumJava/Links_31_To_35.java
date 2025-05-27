@@ -1,18 +1,9 @@
 package com.github.project.SeleniumJava;
 
-import java.util.List;
 import java.util.Set;
-import java.util.logging.Level;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -20,14 +11,13 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import com.github.project.internetherokuapp.InternetHerokuAppBase;
 import com.github.project.internetherokuapp.InternetHerokuAppLocators;
-import org.openqa.selenium.logging.*;
 
 /* 
  * Key Presses
- * Inputs
- * JQueryUIMenus
- * Javascript Alerts
- * Javascript  On Load Event Error 
+ * Large And Deep DOMs
+ * Multiple Windows
+ * Nested Frames
+ * Notification Messages 
  * 
  * */
 
@@ -269,9 +259,9 @@ public class Links_31_To_35 extends InternetHerokuAppBase{
                      
 	    	SoftAssert asrt = new SoftAssert();
 	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.HomePage_WelcomeText), "HomePage_WelcomeText is NOT displayed!");
-	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.HomePage_NotificationMessages), "HomePage_NotificationMessages is NOT displayed!");
+	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.HomePage_NotificationMessagesLink), "HomePage_NotificationMessagesLink is NOT displayed!");
 	
-	        clickWhenClickable(InternetHerokuAppLocators.HomePage_NotificationMessages);
+	        clickWhenClickable(InternetHerokuAppLocators.HomePage_NotificationMessagesLink);
 	        asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.NotificationMessages_Header), "NotificationMessages_Header is NOT displayed!");
             asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.NotificationMessages_Paragraph), "NotificationMessages_Paragraph is NOT displayed!");
             asrt.assertTrue(isElementDisplayed(InternetHerokuAppLocators.NotificationMessages_NewNotificationLink), "NotificationMessages_NewNotificationLink is NOT displayed!");
