@@ -25,7 +25,7 @@ public class Setup extends TestBase{
 
 	@BeforeSuite(alwaysRun = true)
 	@Parameters(value = { "projectName" })
-	public void assignProduct(@Optional String value) {
+	public void assignProduct(@Optional String value) throws Exception {
 		
 		startTime = System.currentTimeMillis();
 		try {

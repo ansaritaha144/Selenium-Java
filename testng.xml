@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Sanity Suite" parallel="classes" verbose="2" thread-count="2">
+
+	  <!-- <group>
+		<run>
+			<include name="Sanity" />
+			<exclude name="Regression" />
+		</run>
+	  </group> -->
+
+	  <listeners>
+	  	<listener class-name="com.github.project.SeleniumJava.TestListeners" />
+	  	<listener class-name="com.github.project.SeleniumJava.AnnotationTransformer" />
+	  	<listener class-name="com.github.project.SeleniumJava.CustomSeleniumTestNGReporter" />
+	  </listeners>
+
+	  <test name="Sanity Test">
+	    <classes>
+	    	<class name="com.github.project.SeleniumJava.Links_01_To_05"/>
+	        <class name="com.github.project.SeleniumJava.Links_06_To_10"/>
+	        <class name="com.github.project.SeleniumJava.Links_11_to_15"/>
+	        <class name="com.github.project.SeleniumJava.Links_16_To_20"/>
+	    	<class name="com.github.project.SeleniumJava.Links_21_To_25"/>
+	    	<class name="com.github.project.SeleniumJava.Links_26_To_30"/>
+	      	<class name="com.github.project.SeleniumJava.Links_31_To_35"/>
+	      	<class name="com.github.project.SeleniumJava.Links_36_To_40"/>
+	      	<class name="com.github.project.SeleniumJava.Links_41_To_42"/>
+	    </classes>
+	  </test> <!-- Test -->
+</suite> <!-- Suite -->

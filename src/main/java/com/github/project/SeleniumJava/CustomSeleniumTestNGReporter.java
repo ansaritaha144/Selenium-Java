@@ -37,7 +37,7 @@ public class CustomSeleniumTestNGReporter extends TestBase implements IReporter 
 	public static Map<ITestResult, String> passedtests = new HashMap();
 	// This is the customize emailabel report template file path.
 	private static final String emailableReportTemplateFile = System.getProperty("user.dir") + File.separator
-			+ "reports" + File.separator + "WebReports" + File.separator + "customize-emailable-report-template.html";
+			+ "src" + File.separator + "main" + File.separator + "java" + File.separator +  "com" + File.separator + "github" + File.separator + "project" + File.separator + "SeleniumJava" + File.separator + "customize-emailable-report-template.html";
 
 	public static String totalTestCount = "";
 	public static String totalTestPassed = "";

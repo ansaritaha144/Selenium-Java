@@ -124,7 +124,7 @@ public class TestListeners extends TestBase implements ITestListener{
 		// TODO Auto-generated method stub
 		ITestListener.super.onStart(context);
 		Log.info("I am in onStart method " + context.getName());
-		context.setAttribute("WebDriver", this.driver);
+		//context.setAttribute("WebDriver", this.driver);
 		String testName = context.getCurrentXmlTest().getName();
 		String threadId = String.valueOf(Thread.currentThread().getId());
 		testSuiteName = context.getSuite().getXmlSuite().getName();

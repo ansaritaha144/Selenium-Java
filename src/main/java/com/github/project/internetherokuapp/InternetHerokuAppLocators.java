@@ -47,6 +47,8 @@ public class InternetHerokuAppLocators {
 	public static final By HomePage_ShadowDOMLink = By.partialLinkText("Shadow DOM");
 	public static final By HomePage_ShiftingContentLink = By.partialLinkText("Shifting Content");
 	public static final By HomePage_SlowResourcesLink = By.partialLinkText("Slow Resources");
+	public static final By HomePage_SortableDataTablesLink = By.partialLinkText("Sortable Data Tables");
+	public static final By HomePage_TyposLink = By.partialLinkText("Typos");
 
 	public static final By HomePage_FooterLink = By.xpath("//div[@id='page-footer']//div/a");
 	
@@ -307,10 +309,16 @@ public class InternetHerokuAppLocators {
 	public static final By SlowResources_Paragraph = By.cssSelector("h3 + p");
 	public static final By SlowResources_MessageParagraph = By.cssSelector("div.example p");
 
+	//SortableDataTablesPage Locators
+	public static final By SortableDataTables_Header = By.xpath("//h3[contains(text(),'Data Tables')]");
+	public static final By SortableDataTables_Paragraph = By.cssSelector("h3 + p");
+	public static final By SortableDataTables_Table1 = By.cssSelector("table#table1");
+	public static final By SortableDataTables_Table2 = By.cssSelector("table#table2");
 	
-	
-	
-	
+	//TyposPage Locators
+	public static final By Typos_Header = By.xpath("//h3[contains(text(),'Data Tables')]");
+	public static final By Typos_Paragraph = By.cssSelector("h3 ~ p:nth-of-type(2)");
+
 	
 	
 	

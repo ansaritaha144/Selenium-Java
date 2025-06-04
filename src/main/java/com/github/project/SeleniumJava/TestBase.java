@@ -69,7 +69,7 @@ public class TestBase {
 	public static Properties data = null;
 	private static boolean isInitalized = false;
 	public static Logger log = null;
-	public static WebDriver driver = null;
+	public WebDriver driver = null;
 	protected WebDriverWait wait = null;
 	private static FileInputStream ip = null;
 	public String productName = "";
@@ -109,7 +109,7 @@ public class TestBase {
 	public WebDriver initializeDriver() throws Exception {
 
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//config//config.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + File.separator + "config" + File.separator + "config.properties");
 		prop.load(fis);
 
 		// Retrieving the "browser" property from Command Terminal OR else from Global
